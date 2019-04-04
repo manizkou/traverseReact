@@ -41,18 +41,27 @@ class TodoItem extends React.Component{
 				<p style={itemStyle} >
 					<input type="checkbox" onChange={this.props.markComplete.bind(this, id)} /> {''}
 					{title}
+					<button className="btn btn-danger" style= {btnStyle} onClick={this.props.delTodo.bind(this,id)}>X</button>
 				</p>
-				<p style ={{ backgroundColor:'#f4f4f4'}} >Hello</p>
+				{/* <p style = {{ backgroundColor:'#f4f4f4'}} >Hello</p> */}
 			</div>
 		);
 	}
 }
 
+const btnStyle ={	
 
+	borderRadius: "50%",
+	cursor : "pointer",
+	float : "right"
+
+}
 
 const itemStyle = {
+
 	padding : '10px',
 	backgroundColor : '#FFFFFF'
+
 }
 
 export default TodoItem;
