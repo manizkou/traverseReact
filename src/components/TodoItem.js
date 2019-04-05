@@ -1,6 +1,6 @@
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class TodoItem extends React.Component{
 
@@ -58,10 +58,14 @@ const btnStyle ={
 }
 
 const itemStyle = {
-
 	padding : '10px',
 	backgroundColor : '#FFFFFF'
+}
 
+TodoItem.propTypes = {
+	todos : PropTypes.array.isRequired,
+	markComplete : PropTypes.func.isRequired,
+	delTodo : PropTypes.func.isRequired
 }
 
 export default TodoItem;
